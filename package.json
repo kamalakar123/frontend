@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/venkateshreddy/frontend.git"
+    "url": "git+https://github.com/kamalakar123/frontend.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/venkateshreddy/frontend/issues"
+    "url": "https://github.com/kamalakar123/frontend/issues"
   },
-  "homepage": "https://github.com/venkateshreddy/frontend#readme",
+  "homepage": "https://github.com/kamalakar123/frontend#readme",
   "dependencies": {
     "express": "^4.16.4"
   }

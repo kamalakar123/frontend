@@ -3,7 +3,7 @@ const app = express()
 
 app.get('/home', loadStudentsHtml);
 
-app.listen(3000, () => console.log(`Example app listening on port 3000!`))
+app.listen(4000, () => console.log(`Example app listening on port 4000!`))
 
 function loadStudentsHtml(req, res) {
     console.log(__dirname);

@@ -35,7 +35,7 @@
             function loadData() {
                 //const students = ''    //get students from server
                 console.log("First console");
-                const getStudentsPromise = performAjax("GET", "http://localhost:3000/students");
+                const getStudentsPromise = performAjax("GET", "http://localhost:4000/students");
                 getStudentsPromise
                 .then((studentsList) => {
                     loadStudents(studentsList);
@@ -66,7 +66,7 @@
             }
 
             function deleteStudent(event) {
-                const deletePromise = performAjax('DELETE', `http://localhost:3000/students/${event.target.id}`);
+                const deletePromise = performAjax('DELETE', `http://localhost:4000/students/${event.target.id}`);
                 deletePromise
                 .then((remainingStudents) => {
                     loadStudents(remainingStudents);
@@ -90,7 +90,7 @@
             }
             function filterRecords(event) {
                 const searchString = event.target.value;
-                const searchStudentsPromise = performAjax("GET", `http://localhost:3000/students/search?string=${searchString}`);
+                const searchStudentsPromise = performAjax("GET", `http://localhost:4000/students/search?string=${searchString}`);
                 searchStudentsPromise
                 .then(filteredStudents => {
                     loadStudents(filteredStudents);
@@ -110,7 +110,7 @@
                 if(event.target.id === 'submit'){
                     const addStudentPromise = performAjax(
                         "POST", 
-                        "http://localhost:3000/students",
+                        "http://localhost:4000/students",
                         JSON.stringify({ name, age, gender, qualification, address })
                     );
                     addStudentPromise
@@ -124,7 +124,7 @@
                 } else {
                     const updateStudentPromise = performAjax(
                         "PUT", 
-                        `http://localhost:3000/students/${id}`,
+                        `http://localhost:4000/students/${id}`,
                         JSON.stringify({ name, age, gender, qualification, address })
                     );
                     updateStudentPromise
